@@ -1,7 +1,7 @@
+package com.example;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.example.User;
-import com.example.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+@SpringBootTest(classes = Application.class)
 @TestPropertySource(locations = "classpath:application.properties")
 @Transactional
 public class Real_HzClientTest {

@@ -1,6 +1,5 @@
-import com.example.User;
-import com.example.UserRepository;
-import com.example.UserService;
+package com.example;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

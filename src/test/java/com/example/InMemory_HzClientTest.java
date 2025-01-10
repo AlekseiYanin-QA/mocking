@@ -1,22 +1,17 @@
-package example;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package com.example;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import com.example.User;
-import com.example.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@DataJpaTest // Используем только эту аннотацию для тестирования JPA
+@SpringBootTest(classes = Application.class) // Укажите основной класс приложения
 public class InMemory_HzClientTest {
 
     @Autowired
-    private UserService userService; // Убедитесь, что UserService правильно настроен для работы с JPA
+    private UserService userService;
 
     @BeforeEach
     void setUp() {
